@@ -1,0 +1,17 @@
+<%= form_with(model: strap, local: true) do |form| %>
+  <% if strap.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(strap.errors.count, "error") %> prohibited this strap from being saved:</h2>
+
+      <ul>
+      <% strap.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

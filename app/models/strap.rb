@@ -1,0 +1,2 @@
+class Strap < ApplicationRecord
+end
